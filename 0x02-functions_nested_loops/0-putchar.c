@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 #include <unistd.h>
 
 /**
@@ -6,7 +6,7 @@
  *
  * Return: 0 (Success)
  */
-int _putcher(char c)
+int _putchar(char c)
 {
-	return (write(1, &c, 1)),
+	return (write(1, &c, 1));
 }
