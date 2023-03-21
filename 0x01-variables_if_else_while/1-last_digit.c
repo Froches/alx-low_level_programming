@@ -1,31 +1,29 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+/* more headers goes there */
+
 
 /**
  * main - Entry point
- * Description: we need tp get to the last digit of a number
- * Return: 0 (Success)
+ * Return: 0 (success)
  */
 
 int main(void)
 {
 	int n;
+	int m;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	ld = n % 10;
-	if (n > 5)
-	{
-		printf("last digit of %d is %d and is greater than 5\n", n);
-	}
-	else if (n == 0)
-	{
-		printf("last digit of %d is %d and is 0", n);
-	}
-	else
-	{
-		printf("last digit of %d is %d and less than 6 and not 0", n);
-	}
+
+	m = n % 10;
+	if (m > 5)
+		printf("Last digit of %d is %d and is greater than 5", m, n);
+	else if (m == 0)
+		printf("Last digit of %d is %d and is zero", m, n);
+	else if (m < 6 && 1 > 0)
+		printf("Lasts digit of %d is %d and is less than 6 and not 0", m, n);
+	printf("\n");
 	return (0);
 }
