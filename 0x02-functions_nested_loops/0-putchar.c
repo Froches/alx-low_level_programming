@@ -1,12 +1,12 @@
 #include <stdio.h>
+#include <unistd.h>
 
 /**
  * main - a program that prints putchar
  *
  * Return: 0 (Success)
  */
-int main(void)
+int _putcher(char c)
 {
-	putchar("_putchar\n");
-	return (0);
+	return (write(1, &c, 1)),
 }
