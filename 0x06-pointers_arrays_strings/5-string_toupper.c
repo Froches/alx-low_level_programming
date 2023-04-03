@@ -6,7 +6,7 @@
  * Return: A pointer to changes loops
  */
 
-char *string_toupper(char *str)	
+char *string_toupper(char *str)
 {
 	int index = 0;
 
