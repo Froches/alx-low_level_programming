@@ -3,8 +3,14 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+/**
+ * *_strpbrk - function prototype
+ * @s: parameter
+ * @accept: parameter
+ * Return: value
+ */
 
 char *_strpbrk(char *s, char *accept)
 {
-	return strpbrk(s, accept);
+	return (strpbrk(s, accept));
 }

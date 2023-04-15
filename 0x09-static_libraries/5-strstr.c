@@ -3,8 +3,14 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+/**
+ * _strstr - prototype
+ * @haystack: parameter
+ * @needle: parameter
+ * Return: value
+ */
 
 char *_strstr(char *haystack, char *needle)
 {
-	return strstr(haystack, needle);
+	return (strstr(haystack, needle));
 }

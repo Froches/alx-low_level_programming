@@ -4,7 +4,13 @@
 #include <ctype.h>
 #include <string.h>
 
+/**
+ * _isdigit - function prototype
+ * @c: parameter
+ * Return: value
+ */
+
 int _isdigit(int c)
 {
-	return isdigit(c);
+	return (isdigit(c));
 }

@@ -3,8 +3,13 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+/**
+ * _strlen - function prototype
+ * @s: parameter
+ * Return: value
+ */
 
 int _strlen(char *s)
 {
-	return strlen(s);
+	return (strlen(s));
 }

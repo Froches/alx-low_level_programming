@@ -3,9 +3,14 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+/**
+ * _abs - function prototype
+ * @n: parameter
+ * Return: value
+ */
 
 int _abs(int n)
 {
-	return abs(n);
+	return (abs(n));
 }
 

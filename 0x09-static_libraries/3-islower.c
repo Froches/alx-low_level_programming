@@ -3,6 +3,11 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+/**
+ * _islower - function prototype
+ * @c: parameter
+ * Return: value
+ */
 
 int _islower(int c)
 {

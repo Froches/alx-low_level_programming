@@ -3,6 +3,11 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+/**
+ * _isupper - function
+ * @c: parameter
+ * Return: isupper
+ */
 
 int _isupper(int c)
 {
