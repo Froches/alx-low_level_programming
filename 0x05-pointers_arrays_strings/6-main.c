@@ -5,6 +5,7 @@
  *
  * Return: Always 0.
  */
+void puts2(char *str);
 int main(void)
 {
     char *str;
