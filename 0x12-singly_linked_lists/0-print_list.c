@@ -25,6 +25,10 @@ size_t print_list(const list_t *h)
 			exit(EXIT_FAILURE);
 		if (write(STDOUT_FILENO, "] ", 2) == -1)
 			exit(EXIT_FAILURE);
+		if (str == NULL)
+		{
+			str = "(nil)";
+		}
 		if (write(STDOUT_FILENO, str, h->len) == -1)
 			exit(EXIT_FAILURE);
 		if (write(STDOUT_FILENO, "\n", 1) == -1)
