@@ -62,8 +62,8 @@ int main(int argc, char *argv[])
 		i++;
 
 	for (; i < len1 + len2; i++)
-		_putchar(result[i] + '0');
-	_putchar('\n');
+		putchar(result[i] + '0');
+	putchar('\n');
 
 	free(result);
 
