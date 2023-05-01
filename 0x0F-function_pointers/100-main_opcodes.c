@@ -3,34 +3,40 @@
 
 /**
  * main - prints its own opcodes
- * @argc: number of arguments passed to the program
- * @argv: array of arguments passed to the program
+ * @argc: number of arguments
+ * @argv: array of arguments
  *
- * Return: 0 if successful, 1 if incorrect number of arguments, 2 if negative
- *         number of bytes
+ * Return: Always 0 (Success)
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int bytes, i;
-	unsigned char *main_ptr;
+	char *arr;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
-		return (1);
+		exit(1);
 	}
 
 	bytes = atoi(argv[1]);
+
 	if (bytes < 0)
 	{
 		printf("Error\n");
-		return (2);
+		exit(2);
 	}
 
-	main_ptr = (unsigned char *)main;
-	for (i = 0; i < bytes; i++)
-		printf("%02x ", *(main_ptr + i));
+	arr = (char *)main;
 
-	printf("\n");
+	for (i = 0; i < bytes; i++)
+	{
+		if (i == bytes - 1)
+		{
+			printf("%02hhx\n", arr[i]);
+			break;
+		}
+		printf("%02hhx ", arr[i]);
+	}
 	return (0);
 }
