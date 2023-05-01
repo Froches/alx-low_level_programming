@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -9,13 +10,14 @@
 
 void free_list(list_t *head)
 {
-	list_t *old;
+	list_t *tmp;
 
-	old = head;
-	for (; head != NULL;)
+	while (head != NULL)
 	{
+		tmp = head;
 		head = head->next;
-		free(old->str);
-		free(old);
+		printf("[%d] %s\n", tmp->len, tmp->str);
+		free(tmp->str);
+		free(tmp);
 	}
 }
