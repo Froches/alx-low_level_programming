@@ -1,42 +1,21 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
+
 /**
- * free_list - frees a linked list
- * @head: list_t list to be freed
- 
+ * free_list - free memory space
+ *
+ * @head: new node
+ * Return: 0
+ */
+
 void free_list(list_t *head)
 {
-	list_t *temp;
-	while (head)
+	list_t *old;
+
+	old = head;
+	for (; head != NULL;)
 	{
-		temp = head->next;
-		free(head->str);
-		free(head);
-		head = temp;
+		head = head->next;
+		free(old->str);
+		free(old);
 	}
-	exit(EXIT_SUCCESS);
-}
- */
-#include <stdlib.h>
-#include "lists.h"
-
-/**
- * free_list - frees a linked list
- * @head: list_t list to be freed
- */
-void free_list(list_t *head)
-{
-        list_t *temp;
-
-        while (head)
-        {
-                temp = head->next;
-                free(head->str);
-                free(head);
-                head = temp;
-        }
-
-        printf("Freed !\n");
-        exit(EXIT_SUCCESS);
 }
