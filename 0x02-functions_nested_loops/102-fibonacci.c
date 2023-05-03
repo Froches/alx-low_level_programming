@@ -5,23 +5,22 @@
  */
 int main(void)
 {
-	int first = 1, second = 2, next, i;
+	int i, fib[50];
 
-	printf("%d, %d, ", first, second);
+	fib[0] = 1;
+	fib[1] = 2;
 
 	for (i = 2; i < 50; i++)
 	{
-		next = first + second;
-		printf("%d", next);
-		if (i < 49)
-		{
-			printf(", ");
-		}
-		first = second;
-		second = next;
+		fib[i] = fib[i - 1] + fib[i - 2];
 	}
 
-	printf("\n");
+	for (i = 0; i < 49; i++)
+	{
+		printf("%d, ", fib[i]);
+	}
+	printf("%d\n", fib[49]);
 
 	return (0);
 }
+
