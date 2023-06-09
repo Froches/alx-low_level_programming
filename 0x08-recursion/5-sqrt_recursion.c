@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- sqrt_helper - helper function to calculate the square root
+ * sqrt_helper - helper function to calculate the square root
  * @n: the number whose square root is to be calculated
  * @guess: the current guess for the square root
  * Return: the natural square root or -1 if n does not have a square root
