@@ -4,7 +4,14 @@
 #include <ctype.h>
 #include <string.h>
 
+/**
+ * _strchr - function
+ * @s: parameter
+ * @c: parameter
+ * Return: value
+ */
+
 char *_strchr(char *s, char c)
 {
-	return strchr(s, c);
+	return (strchr(s, c));
 }
