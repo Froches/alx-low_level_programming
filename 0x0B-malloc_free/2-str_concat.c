@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "main.h"
 
 /**
@@ -13,6 +14,8 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *cat;
+	char *cats;
+	size_t len;
 
 	if (s1 == NULL)
 	{
@@ -21,10 +24,14 @@ char *str_concat(char *s1, char *s2)
 
 	cat = strcat(s1, s2);
 
+	len = strlen(cat);
+
+	cats = (char *)malloc(sizeof(char) * (len + 1));
+
 	if (cat == NULL)
 	{
 		return (NULL);
 	}
 
-	return (cat);
+	return (cats);
 }
