@@ -14,42 +14,28 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *cat;
-	char *cats;
 	size_t len1, len2, totallen;
 
-	if (s1 == NULL || s2 == NULL)
-	{
-		return (NULL);
-	}
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
 	len1 = strlen(s1);
 	len2 = strlen(s2);
 	totallen = len1 + len2;
 
-	cats = (char *)malloc(sizeof(char) * (totallen + 1));
+	cat = (char *)malloc(sizeof(char) * (totallen + 1));
 
-	if (cats == NULL)
+	if (cat == NULL)
 	{
 		return (NULL);
 	}
 
-	cat = cats;
+	memcpy(cat, s1, len1);
+	memcpy(cat + len1, s2, len2);
+	cat[totallen] = '\0';
 
-	while (*s1 != '\0')
-	{
-		*cat = *s1;
-		cat++;
-		s1++;
-	}
 
-	while (*s2 != '\0')
-	{
-		*cat = *s2;
-		cat++;
-		s2++;
-	}
-
-	*cat = '\0';
-
-	return (cats);
+	return (cat);
 }
