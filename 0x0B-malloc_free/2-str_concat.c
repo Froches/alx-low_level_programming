@@ -15,23 +15,41 @@ char *str_concat(char *s1, char *s2)
 {
 	char *cat;
 	char *cats;
-	size_t len;
+	size_t len1, len2, totallen;
 
-	if (s1 == NULL)
+	if (s1 == NULL || s2 == NULL)
 	{
 		return (NULL);
 	}
 
-	cat = strcat(s1, s2);
+	len1 = strlen(s1);
+	len2 = strlen(s2);
+	totallen = len1 + len2;
 
-	len = strlen(cat);
+	cats = (char *)malloc(sizeof(char) * (totallen + 1));
 
-	cats = (char *)malloc(sizeof(char) * (len + 1));
-
-	if (cat == NULL)
+	if (cats == NULL)
 	{
 		return (NULL);
 	}
+
+	cat = cats;
+
+	while (*s1 != '\0')
+	{
+		*cat = *s1;
+		cat++;
+		s1++;
+	}
+
+	while (*s2 != '\0')
+	{
+		*cat = *s2;
+		cat++;
+		s2++;
+	}
+
+	*cat = '\0';
 
 	return (cats);
 }
