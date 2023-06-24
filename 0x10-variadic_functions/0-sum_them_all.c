@@ -2,6 +2,11 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 
+/**
+ * sum_them_all - program that sums all parameters
+ * @n: parameter passed to be function
+ * Return: sum of all parameters
+ */
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list args;
