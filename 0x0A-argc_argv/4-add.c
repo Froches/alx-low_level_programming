@@ -1,34 +1,67 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <string.h>
+/**
+ * check_num - check - string that are digit
+ * @str: array str
+ *
+ * Return: Always 0
+ */
+int check_num(char *str)
+{
+	unsigned int count;
+
+	count = 0;
+	while (count < strlen(str))
+
+	{
+		if (!isdigit(str[count]))
+		{
+			return (0);
+		}
+
+		count++;
+	}
+	return (1);
+}
 
 /**
- * main - entry point
- * @argc: count
- * @argv: vector
- * Return: 0 on success, 1 otherwise
+ * main - Print name of the program
+ * @argc: Count arguments
+ * @argv: Arguments
+ *
+ * Return: Always 0
  */
+
 int main(int argc, char *argv[])
+
 {
-	int i, j, result;
 
-	if (argc == 1)
-	{
-		printf("%d\n", 0);
-	}
+	int count;
+	int str_to_int;
+	int sum = 0;
 
-	for (i = 0; i < argc; i++)
+	count = 1;
+	while (count < argc)
 	{
-		for (j = 0; argv[i][j] != '\0'; j++)
+		if (check_num(argv[count]))
+
 		{
-			if (!isdigit(argv[i][j]))
-			{
-				printf("Error\n");
-				return (1);
-			}
+			str_to_int = atoi(argv[count]);
+			sum += str_to_int;
 		}
-		result += atoi(argv[i]);
+
+		else
+		{
+			printf("Error\n");
+			return (1);
+		}
+
+		count++;
 	}
-	printf("%d\n", result);
+
+	printf("%d\n", sum);
+
 	return (0);
 }
