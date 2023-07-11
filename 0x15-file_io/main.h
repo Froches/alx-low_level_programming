@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
+#include <string.h>
 
 int putchar(int c);
 ssize_t read_textfile(const char *filename, size_t letters);
