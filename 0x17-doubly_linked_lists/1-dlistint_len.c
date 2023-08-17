@@ -3,7 +3,7 @@
 
 /**
  * dlistint_len - Returns the number of elements in a dlistint_t list.
- * @head: Pointer to the head of the list
+ * @h: Pointer to the head of the list
  *
  * Return: The number of elements in a linked list
  */
